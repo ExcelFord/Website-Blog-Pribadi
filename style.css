@@ -189,3 +189,19 @@ box-shadow:0 0 10px #3c8cff,
            0 0 20px #6fe3ff;
 }
 }
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.marquee span {
+  display: inline-block;
+  animation: jalan 13s linear infinite;
+}
+
+@keyframes jalan {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
