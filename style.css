@@ -5,7 +5,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:180vh;
+    height:190vh;
     color:white;
 }
 
@@ -19,6 +19,29 @@ width:250px;
 border-radius:30%;
 border:3px solid #6fe3ff;
 box-shadow:0 0 10px #6fe3ff;
+}
+
+.running-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.running-text p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: slideText 10s linear infinite;
+  font-size: 20px;
+  color: white;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 h2{
@@ -188,20 +211,4 @@ box-shadow:0 0 25px #6fe3ff,
 box-shadow:0 0 10px #3c8cff,
            0 0 20px #6fe3ff;
 }
-}
-
-.marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-}
-
-.marquee span {
-  display: inline-block;
-  animation: jalan 13s linear infinite;
-}
-
-@keyframes jalan {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
 }
