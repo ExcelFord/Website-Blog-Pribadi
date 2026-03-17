@@ -1,11 +1,11 @@
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg,#2b2b6f,#0c0c2e);
+    background: linear-gradient(180deg,#2E073F,#7A1CAC);
     display:flex;
     justify-content:center;
     align-items:center;
-    height:150vh;
+    height:180vh;
     color:white;
 }
 
@@ -100,9 +100,92 @@ color:#5865F2;
 .links a:hover{
     background:#3c8cff;
 }
+.slider{
+position:relative;
+width:300px;
+margin:20px auto;
+overflow:hidden;
+border-radius:15px;
+}
+
+.slide{
+width:100%;
+display:none;
+border-radius:15px;
+}
+
+.slide.active{
+display:block;
+}
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+border-radius:50%;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.prev:hover, .next:hover{
+background:#3c8cff;
+}
 
 footer{
     margin-top:20px;
     font-size:12px;
     color:#aaa;
+}
+
+.music-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+
+width:70px;        /* ukuran lebih besar */
+height:70px;
+
+border-radius:50%;
+border:none;
+
+background:linear-gradient(45deg,#3c8cff,#6fe3ff);
+color:white;
+font-size:26px;
+
+cursor:pointer;
+
+/* glow */
+box-shadow:0 0 15px #3c8cff,
+           0 0 30px #6fe3ff;
+
+/* animasi */
+animation:pulse 1.8s infinite;
+transition:0.3s;
+}
+
+/* efek hover */
+.music-btn:hover{
+transform:scale(1.1);
+}
+
+/* animasi berdenyut */
+@keyframes pulse{
+0%{
+box-shadow:0 0 10px #3c8cff,
+           0 0 20px #6fe3ff;
+}
+50%{
+box-shadow:0 0 25px #6fe3ff,
+           0 0 50px #3c8cff;
+}
+100%{
+box-shadow:0 0 10px #3c8cff,
+           0 0 20px #6fe3ff;
+}
 }
