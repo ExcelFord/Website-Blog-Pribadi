@@ -218,32 +218,3 @@ box-shadow:0 0 10px #3c8cff,
   border-radius: 15px;
   position: relative;
 }
-
-/* GIF */
-.gif {
-  width: 270px;
-  border-radius: 12px;
-  display: block;
-}
-
-/* Neon Glow Border */
-.neon-border::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 15px;
-  background: linear-gradient(45deg, purple, cyan, purple, cyan);
-  z-index: -1;
-  filter: blur(10px);
-  animation: neonGlow 4s linear infinite;
-}
-
-/* Animasi warna jalan */
-@keyframes neonGlow {
-  0% {
-    filter: blur(10px) hue-rotate(0deg);
-  }
-  100% {
-    filter: blur(10px) hue-rotate(360deg);
-  }
-}
